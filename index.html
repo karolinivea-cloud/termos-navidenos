@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termos y Vasos Navideños – Landing Oficial</title>
+
+    <style>
+        :root {
+            --primary: #d62828;
+            --primary-dark: #961b1b;
+            --accent: #2d6a4f;
+            --bg-dark: #0b1419;
+            --text-main: #1f2933;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: radial-gradient(circle at top, #ffcccc, #8b0000 45%, #1b0202 100%);
+            color: #fff;
+        }
+
+        .snow {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                radial-gradient(circle, rgba(255,255,255,0.7) 0, rgba(255,255,255,0.7) 2px, transparent 3px),
+                radial-gradient(circle, rgba(255,255,255,0.35) 0, rgba(255,255,255,0.35) 2px, transparent 3px);
+            background-size: 200px 200px, 260px 260px;
+            animation: snowfall 28s linear infinite;
+            opacity: 0.25;
+            z-index: 0;
+        }
+
+        @keyframes snowfall {
+            0% { background-position: 0 0, 80px 40px; }
+            100% { background-position: 0 900px, 80px 940px; }
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .brand-logo {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ffe66d, #f77f00);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .brand-name {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            color: #ffe9e9;
+            text-decoration: none;
+            padding: 6px 10px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 999px;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        .hero {
+            margin-top: 22px;
+            padding: 28px;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.08);
+            box-shadow: 0 18px 45px rgba(0,0,0,0.6);
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .hero span {
+            color: #ffe66d;
+        }
+
+        .hero p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            background: rgba(255,255,255,0.95);
+            color: var(--text-main);
+            padding: 22px;
+            margin-top: 26px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.45);
+        }
+
+        .section h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .section p, .section ul {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .section ul {
+            list-style: "🎄 ";
+            padding-left: 20px;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #14532d, #166534);
+            margin-top: 26px;
+            padding: 22px;
+            text-align: center;
+            border-radius: 20px;
+            color: #fffbe8;
+            box-shadow: 0 22px 50px rgba(0,0,0,0.6);
+        }
+
+        .cta a {
+            margin-top: 12px;
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 999px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            background: #25D366;
+            color: #fff;
+            font-size: 34px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 0 18px rgba(0,0,0,0.7);
+        }
+    </style>
+</head>
+<body>
+
+<div class="snow"></div>
+
+<div class="page">
+
+    <div class="top-bar">
+        <div class="brand">
+            <div class="brand-logo">🎄</div>
+            <div class="brand-name">Colección Navideña</div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <h1>Termos y vasos navideños<br><span>listos para regalar o vender</span></h1>
+        <p>Diseños tiernos y festivos ideales para café, chocolate o bebidas frías. Perfectos para regalos, intercambios y promociones.</p>
+
+        <a class="btn-primary" 
+           href="https://wa.me/5216141413926?text=Hola!%20Quiero%20informaci%C3%B3n%20y%20hacer%20un%20pedido."
+           target="_blank">
+            Pedir por WhatsApp 📲
+        </a>
+    </section>
+
+    <section class="section">
+        <h2>Termo Mate Navideño</h2>
+        <p>Perfecto para mantener tus bebidas a la temperatura ideal con un acabado elegante.</p>
+        <ul>
+            <li>Doble pared AS</li>
+            <li>Caliente: 1 hora · Frío: 4 horas</li>
+            <li>Acabado suave mate</li>
+            <li>Tapa segura + popote reutilizable</li>
+            <li>710 ml · Libre de BPA</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Vasos Cafeteros Navideños</h2>
+        <p>Diseños adorables de Santa, casitas de jengibre, renos y más.</p>
+        <ul>
+            <li>Tapa + popote reutilizable</li>
+            <li>Diseños navideños únicos</li>
+            <li>Perfectos para café o bebidas frías</li>
+            <li>Fotogénicos y listos para regalar</li>
+        </ul>
+    </section>
+
+    <section class="cta">
+        <h2>¿Listo para hacer tu pedido?</h2>
+        <p>Escríbenos por WhatsApp para ver disponibilidad.</p>
+        <a href="https://wa.me/5216141413926?text=Hola!%20Vi%20la%20landing%20y%20quiero%20pedir%20informaci%C3%B3n."
+           target="_blank">Contactar ahora</a>
+    </section>
+
+    <div class="footer">
+        © 2024 Termos y Vasos Navideños – Todos los derechos reservados.
+    </div>
+
+</div>
+
+<a class="whatsapp-btn" 
+   href="https://wa.me/5216141413926?text=Hola!%20Quiero%20informaci%C3%B3n."
+   target="_blank">💬</a>
+
+</body>
+</html>
